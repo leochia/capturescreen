@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="base64demo"
+  id="myeclipse.1344947102088"
+  context-root="/base64demo"
+  j2ee-spec="5.0"
+  archive="base64demo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

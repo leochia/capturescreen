@@ -1,0 +1,37 @@
+// CaptureScreen.idl : IDL source for CaptureScreen
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CaptureScreen.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0E5A8DD5-21B1-4AFA-AC07-9A6B326529AD),
+	dual,
+	nonextensible,
+	helpstring("IFoo Interface"),
+	pointer_default(unique)
+]
+interface IFoo : IDispatch{
+    [id(1), helpstring("method PicValue")] HRESULT PicValue([out,retval] BSTR* na);
+};
+[
+	uuid(A424FE7F-0AD4-4E76-A0E4-9748EAEBA74E),
+	version(1.0),
+	helpstring("CaptureScreen 1.0 Type Library")
+]
+library CaptureScreenLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(D4A55BDB-B9FF-4CF2-AB5C-F073492D46DF),
+		helpstring("Foo Class")
+	]
+	coclass Foo
+	{
+		[default] interface IFoo;
+	};
+};

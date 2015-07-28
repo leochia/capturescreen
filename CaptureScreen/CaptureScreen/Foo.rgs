@@ -1,0 +1,26 @@
+HKCR
+{
+	CaptureScreen.Foo.1 = s 'Foo Class'
+	{
+		CLSID = s '{D4A55BDB-B9FF-4CF2-AB5C-F073492D46DF}'
+	}
+	CaptureScreen.Foo = s 'Foo Class'
+	{
+		CLSID = s '{D4A55BDB-B9FF-4CF2-AB5C-F073492D46DF}'
+		CurVer = s 'CaptureScreen.Foo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D4A55BDB-B9FF-4CF2-AB5C-F073492D46DF} = s 'Foo Class'
+		{
+			ProgID = s 'CaptureScreen.Foo.1'
+			VersionIndependentProgID = s 'CaptureScreen.Foo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A424FE7F-0AD4-4E76-A0E4-9748EAEBA74E}'
+		}
+	}
+}
